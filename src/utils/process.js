@@ -1,4 +1,6 @@
-export const process_world = (world, world_objetive) => {
+let status_letters = ["wrong", "missplace", "success"]
+
+const process_world = (world, world_objetive) => {
     let array_result = []
 
     for (let i = 0; i < world.length; i++) {
@@ -22,3 +24,16 @@ export const process_world = (world, world_objetive) => {
         complete: world == world_objetive
     }
 }
+
+
+const renderize_results = (results, attemp) => {
+    for (let i = 0; i < results.length; i++) {
+        index =  i + 1
+        id = attemp + "_" +  "otp" + index
+
+        element =  document.getElementById(id)
+        element.classList.add( status_letters[i] );
+    } 
+} 
+
+export default {process_world , renderize_results}
