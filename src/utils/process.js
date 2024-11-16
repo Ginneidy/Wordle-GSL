@@ -1,5 +1,6 @@
+let status_letters = ["wrong", "missplace", "success"]
 
-function process_world(world, world_objetive){
+const process_world = (world, world_objetive) => {
     let array_result = []
 
     for (let i = 0; i < world.length; i++) {
@@ -25,4 +26,14 @@ function process_world(world, world_objetive){
 }
 
 
-export default process_world
+const renderize_results = (results, attemp) => {
+    for (let i = 0; i < results.length; i++) {
+        index =  i + 1
+        id = attemp + "_" +  "otp" + index
+
+        element =  document.getElementById(id)
+        element.classList.add( status_letters[i] );
+    } 
+} 
+
+export default {process_world , renderize_results}
