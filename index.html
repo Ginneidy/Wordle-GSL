@@ -10,40 +10,46 @@
   <body>
     <div class="general-container">
       <div class="answer-container">
-        <div style="display: none;" class="answer" id="answer1">
+        <div style="display: none" class="answer" id="answer1">
           <input type="text" disabled class="answer-letter" id="1_otp1" />
           <input type="text" disabled class="answer-letter" id="1_otp2" />
           <input type="text" disabled class="answer-letter" id="1_otp3" />
           <input type="text" disabled class="answer-letter" id="1_otp4" />
           <input type="text" disabled class="answer-letter" id="1_otp5" />
         </div>
-        <div style="display: none;"  class="answer" id="answer2">
+        <div style="display: none" class="answer" id="answer2">
           <input type="text" disabled class="answer-letter" id="2_otp1" />
           <input type="text" disabled class="answer-letter" id="2_otp2" />
           <input type="text" disabled class="answer-letter" id="2_otp3" />
           <input type="text" disabled class="answer-letter" id="2_otp4" />
           <input type="text" disabled class="answer-letter" id="2_otp5" />
         </div>
-        <div style="display: none;"  class="answer" id="answer3">
+        <div style="display: none" class="answer" id="answer3">
           <input type="text" disabled class="answer-letter" id="3_otp1" />
           <input type="text" disabled class="answer-letter" id="3_otp2" />
           <input type="text" disabled class="answer-letter" id="3_otp3" />
           <input type="text" disabled class="answer-letter" id="3_otp4" />
           <input type="text" disabled class="answer-letter" id="3_otp5" />
         </div>
-        <div style="display: none;"  class="answer" id="answer4">
+        <div style="display: none" class="answer" id="answer4">
           <input type="text" disabled class="answer-letter" id="4_otp1" />
           <input type="text" disabled class="answer-letter" id="4_otp2" />
           <input type="text" disabled class="answer-letter" id="4_otp3" />
           <input type="text" disabled class="answer-letter" id="4_otp4" />
           <input type="text" disabled class="answer-letter" id="4_otp5" />
         </div>
-        <div style="display: none;"  class="answer" id="answer5">
+        <div style="display: none" class="answer" id="answer5">
           <input type="text" disabled class="answer-letter" id="5_otp1" />
           <input type="text" disabled class="answer-letter" id="5_otp2" />
           <input type="text" disabled class="answer-letter" id="5_otp3" />
           <input type="text" disabled class="answer-letter" id="5_otp4" />
-          <input type="text" disabled class="answer-letter" id="5_otp5" value="Q" />
+          <input
+            type="text"
+            disabled
+            class="answer-letter"
+            id="5_otp5"
+            value="Q"
+          />
         </div>
       </div>
       <form class="form-otp" action="" method="post">
@@ -90,9 +96,11 @@
           />
         </div>
         <div class="btn-container">
-          <button class="btn">Enviar</button>
+          <button id="send" class="btn">Enviar</button>
         </div>
       </form>
     </div>
+    <script type="module" src="./src/utils/attemps.js"></script>
+    <script type="module" src="./src/utils/selectWord.js"></script>
   </body>
 </html>
