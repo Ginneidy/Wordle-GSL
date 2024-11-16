@@ -8,17 +8,91 @@
     <link rel="stylesheet" href="/src/styles/styles.css" />
   </head>
   <body>
-    <form class="form-otp" action="" method="post">
-      <div class="otp-container">
-        <input type="text" maxlength="1" class="otp-input" id="otp1" required />
-        <input type="text" maxlength="1" class="otp-input" id="otp2" required />
-        <input type="text" maxlength="1" class="otp-input" id="otp3" required />
-        <input type="text" maxlength="1" class="otp-input" id="otp4" required />
-        <input type="text" maxlength="1" class="otp-input" id="otp5" required />
+    <div class="general-container">
+      <div class="answer-container">
+        <div style="display: none;" class="answer" id="answer1">
+          <input type="text" disabled class="answer-letter" id="1_otp1" />
+          <input type="text" disabled class="answer-letter" id="1_otp2" />
+          <input type="text" disabled class="answer-letter" id="1_otp3" />
+          <input type="text" disabled class="answer-letter" id="1_otp4" />
+          <input type="text" disabled class="answer-letter" id="1_otp5" />
+        </div>
+        <div style="display: none;"  class="answer" id="answer2">
+          <input type="text" disabled class="answer-letter" id="2_otp1" />
+          <input type="text" disabled class="answer-letter" id="2_otp2" />
+          <input type="text" disabled class="answer-letter" id="2_otp3" />
+          <input type="text" disabled class="answer-letter" id="2_otp4" />
+          <input type="text" disabled class="answer-letter" id="2_otp5" />
+        </div>
+        <div style="display: none;"  class="answer" id="answer3">
+          <input type="text" disabled class="answer-letter" id="3_otp1" />
+          <input type="text" disabled class="answer-letter" id="3_otp2" />
+          <input type="text" disabled class="answer-letter" id="3_otp3" />
+          <input type="text" disabled class="answer-letter" id="3_otp4" />
+          <input type="text" disabled class="answer-letter" id="3_otp5" />
+        </div>
+        <div style="display: none;"  class="answer" id="answer4">
+          <input type="text" disabled class="answer-letter" id="4_otp1" />
+          <input type="text" disabled class="answer-letter" id="4_otp2" />
+          <input type="text" disabled class="answer-letter" id="4_otp3" />
+          <input type="text" disabled class="answer-letter" id="4_otp4" />
+          <input type="text" disabled class="answer-letter" id="4_otp5" />
+        </div>
+        <div style="display: none;"  class="answer" id="answer5">
+          <input type="text" disabled class="answer-letter" id="5_otp1" />
+          <input type="text" disabled class="answer-letter" id="5_otp2" />
+          <input type="text" disabled class="answer-letter" id="5_otp3" />
+          <input type="text" disabled class="answer-letter" id="5_otp4" />
+          <input type="text" disabled class="answer-letter" id="5_otp5" value="Q" />
+        </div>
       </div>
-      <div class="btn-container">
-        <button class="btn">Enviar</button>
-      </div>
-    </form>
+      <form class="form-otp" action="" method="post">
+        <div class="otp-container">
+          <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            id="otp1"
+            required
+            autocomplete="off"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            id="otp2"
+            required
+            autocomplete="off"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            id="otp3"
+            required
+            autocomplete="off"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            id="otp4"
+            required
+            autocomplete="off"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            id="otp5"
+            required
+            autocomplete=""
+          />
+        </div>
+        <div class="btn-container">
+          <button class="btn">Enviar</button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
