@@ -1,5 +1,5 @@
 import { selectRandomWord } from "./selectWord.js";
-import { process_world } from "./process.js";
+import { process_world, renderize_results } from "./process.js";
 
 var attempts = 5;
 var word;
@@ -22,16 +22,17 @@ const validateAttempts = () => {
     const word_user = joinLetters();
     if (!word) {
         word = selectRandomWord();
-        console.log("La palabra seleccionada es: ", word);
+        // console.log("La palabra seleccionada es: ", word);
     }
     const response = process_world(word_user, word);
     response['attempt'] = attempts;
-    attempts--;
-
+    
     if (attempts == 1) {
         response["final"] = true;
     }
-    return response;
+    // return response;
+    renderize_results(response.results, attempts, word_user);
+    attempts--;
 }
 
 sendButton.addEventListener('click', validateAttempts);

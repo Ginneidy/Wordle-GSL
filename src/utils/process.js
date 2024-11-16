@@ -1,6 +1,6 @@
-let status_letters = ["wrong", "missplace", "success"]
+let status_letters = ["wrong", "missplaced", "success"]
 
-const process_world = (world, world_objetive) => {
+export const process_world = (world, world_objetive) => {
     let array_result = []
 
     for (let i = 0; i < world.length; i++) {
@@ -25,15 +25,18 @@ const process_world = (world, world_objetive) => {
     }
 }
 
+export const renderize_results = (results, attemp, word) => {
 
-const renderize_results = (results, attemp) => {
     for (let i = 0; i < results.length; i++) {
-        index =  i + 1
-        id = attemp + "_" +  "otp" + index
+        let index =  i + 1
+        let id = attemp + "_" +  "otp" + index
 
-        element =  document.getElementById(id)
-        element.classList.add( status_letters[i] );
+        const element =  document.getElementById(id)
+        element.classList.add( status_letters[results[i]] );
+        // console.log(element);
+        element.value = word[i]
+        element.setAttribute("style", "display: block;");
     } 
 } 
 
-export default {process_world , renderize_results}
+// export default {process_world , renderize_results}
