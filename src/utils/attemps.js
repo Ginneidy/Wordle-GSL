@@ -1,11 +1,9 @@
 import { selectRandomWord } from "./selectWord.js";
+import { process_world } from "./process.js";
 
-const attempts = 5;
+var attempts = 5;
+var word;
 const sendButton = document.getElementById('send');
-const letter1 = document
-const getAttempts = () => {
-    return attempts;
-}
 
 const joinLetters = () => {
     const letter1 = document.getElementById('otp1').value;
@@ -16,18 +14,24 @@ const joinLetters = () => {
 
     const user_word = letter1 + letter2 + letter3 + letter4 + letter5;
     return user_word;
+
 }
 
-sendButton.addEventListener('click', joinLetters);
+const validateAttempts = () => {
 
-
-const validateAttempts = (attempts) => {
-    var word;
-    if (attempts === 5) {
-        // Primer palabra entonces se crea la palabra
+    const word_user = joinLetters();
+    if (!word) {
         word = selectRandomWord();
+        console.log("La palabra seleccionada es: ", word);
     }
-    else if (attempts === 1) {
-        // Ultima palabra entonces se reinicia el juego
+    const response = process_world(word_user, word);
+    response['attempt'] = attempts;
+    attempts--;
+
+    if (attempts == 1) {
+        response["final"] = true;
     }
+    return response;
 }
+
+sendButton.addEventListener('click', validateAttempts);
