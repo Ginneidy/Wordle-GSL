@@ -36,10 +36,4 @@ export const selectRandomWord = () => {
     return palabras[randomIndex];
 }
 
-const palabraSeleccionada = selectRandomWord();
-
-console.log("palabraSeleccionada", palabraSeleccionada);
-
-
-
 
